@@ -1,0 +1,458 @@
+@media only screen and (min-width: 641px) and (max-width: 1024px), only screen and (min-width: 1025px) {
+    main {
+        background-image:url(../static/home/desktop-bg.jpg);
+        background-size: cover
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    main {
+        background:url(../static/common/bg/mobile-bg-top.jpg) no-repeat top center,url(../static/home/mobile-bg-bottom.png) no-repeat bottom center,url(../static/common/bg/mobile-bg-repeat.jpg) repeat-y top center;
+        background-size: 100% auto
+    }
+}
+
+#index.page {
+    overflow: hidden;
+    position: relative
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px), only screen and (min-width: 1025px) {
+    #index .ship-left,#index .ship-right {
+        width:calc((100% - 588px) / 2);
+        height: 378px;
+        position: absolute;
+        overflow: hidden
+    }
+
+    #index .ship-right {
+        right: 0
+    }
+
+    #index .ship {
+        position: absolute;
+        width: 100%;
+        cursor: pointer
+    }
+
+    #index .ship::before {
+        content: "";
+        display: block;
+        width: 100%
+    }
+
+    #index .ship .float {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0
+    }
+
+    #index .ship img {
+        display: block;
+        width: 100%
+    }
+
+    #index .ship-left .ship {
+        max-width: 521px;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+
+    #index .ship-left .ship::before {
+        padding-top: 68.71401%
+    }
+
+    #index .ship-left .ship .float {
+        -webkit-animation: shipLeft 12.2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation: shipLeft 12.2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    }
+
+    #index .ship-right .ship {
+        max-width: 539px;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+
+    #index .ship-right .ship::before {
+        padding-top: 70.68646%
+    }
+
+    #index .ship-right .ship .float {
+        -webkit-animation: shipRight 11.33s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation: shipRight 11.33s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    #index .ship-left,#index .ship-right {
+        width:calc((100% - 450px) / 2);
+        height: 300px
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #index .ship-left,#index .ship-right {
+        display:none !important
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px), only screen and (min-width: 1025px) {
+    #index .promos {
+        max-width:588px;
+        margin: 40px auto 85px auto;
+        position: relative
+    }
+
+    #index .promos::before {
+        content: "";
+        padding-top: 64.28571%;
+        display: block
+    }
+
+    #index .promos .slides {
+        position: absolute;
+        width: 91.15646%;
+        height: 79.36508%;
+        top: 6.08466%;
+        left: 4.59184%;
+        z-index: 2
+    }
+
+    #index .promos .slide a::before,#index .promos .slide a::after,#index .promos .slide::before {
+        display: none
+    }
+
+    #index .promos .slide img {
+        position: static;
+        width: 100%;
+        height: auto
+    }
+
+    #index .promos>.frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../static/home/promo-frame.png) no-repeat center center;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 10
+    }
+
+    #index .promos>.frame .icon {
+        width: 52px;
+        height: 36px;
+        position: absolute;
+        top: 20px;
+        right: 22px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto
+    }
+
+    #index .promos>.frame .icon[data-type="games"] {
+        background-image: url(../static/common/list/frame-icon-games.png)
+    }
+
+    #index .promos>.frame .icon[data-type="videos"] {
+        background-image: url(../static/common/list/frame-icon-videos.png)
+    }
+
+    #index .promos>.frame .icon[data-type="activities"] {
+        background-image: url(frame-icon-activities.png)
+    }
+
+    .no-csspointerevents #index .promos>.frame {
+        z-index: 1
+    }
+
+    #index .promos .pagination {
+        width: 23.80952%;
+        height: 6.61376%;
+        position: absolute;
+        top: 88.35979%;
+        left: 39.11565%;
+        z-index: 11;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around
+    }
+
+    #index .promos .pagination a.bullet {
+        cursor: pointer;
+        background-color: #033634;
+        border-color: #012422;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 4px 2px 2px 2px;
+        -webkit-box-shadow: 0 1px 3px -2px #003d3b;
+        box-shadow: 0 1px 3px -2px #003d3b;
+        height: 100%;
+        width: 17.14286%
+    }
+
+    #index .promos .pagination a.bullet.active {
+        background-image: -webkit-gradient(linear, left bottom, left top, from(#4f9500), to(#ffef52));
+        background-image: linear-gradient(0deg, #4f9500, #ffef52);
+        border-width: 2px;
+        -webkit-box-shadow: 0 3px 3px -1px #003d3b,0 3px 5px rgba(255,255,255,0.9) inset,0 -3px 5px rgba(36,168,0,0.4) inset;
+        box-shadow: 0 3px 3px -1px #003d3b,0 3px 5px rgba(255,255,255,0.9) inset,0 -3px 5px rgba(36,168,0,0.4) inset
+    }
+
+    #index .promos .pagination span {
+        width: 17.14286%;
+        height: 100%;
+        background: url(../static/home/pagination.png);
+        background-size: 100% auto
+    }
+
+    #index .promos .pagination span.active {
+        background-position: 0 bottom
+    }
+
+    #index .promos .prev,#index .promos .next {
+        display: block;
+        position: absolute
+    }
+
+    #index .promos .prev img,#index .promos .next img {
+        display: block;
+        width: 100%;
+        height: auto
+    }
+
+    #index .promos .prev .over,#index .promos .next .over {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        -webkit-transition: 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: 300ms cubic-bezier(0.165, 0.84, 0.44, 1)
+    }
+
+    .no-touchevents #index .promos .prev:hover .over,.touchevents #index .promos .prev:active .over,.no-touchevents #index .promos .next:hover .over,.touchevents #index .promos .next:active .over {
+        opacity: 1
+    }
+
+    #index .promos .prev {
+        width: 18.53741%;
+        height: 21.16402%;
+        top: 88.62434%;
+        left: 4.59184%;
+        z-index: 11
+    }
+
+    #index .promos .prev::before {
+        background-image: url(../static/home/promo-prev.png)
+    }
+
+    #index .promos .next {
+        width: 18.53741%;
+        height: 21.42857%;
+        top: 88.09524%;
+        right: 4.2517%;
+        z-index: 11
+    }
+
+    #index .promos .next::before {
+        background-image: url(../static/home/promo-next.png)
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .theme-default #index .promos {
+        max-width:450px
+    }
+
+    .theme-default #index .promos>.frame .icon {
+        -webkit-transform: scale(0.65);
+        transform: scale(0.65);
+        -webkit-transform-origin: top right;
+        transform-origin: top right
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #index .promos {
+        margin:20px
+    }
+
+    #index .promos .swiper-container {
+        overflow: visible
+    }
+
+    #index .promos .swiper-wrapper {
+        display: block
+    }
+
+    #index .promos .prev,#index .promos .next {
+        display: none
+    }
+
+    #index .promos .slide {
+        margin: 15px 0;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .no-touchevents #index .promos .slide:hover,.touchevents #index .promos .slide:active {
+        -webkit-animation: hoverBounce 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
+        animation: hoverBounce 350ms cubic-bezier(0.645, 0.045, 0.355, 1)
+    }
+
+    #index .promos .slide img {
+        height: auto;
+        display: block
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px), only screen and (min-width: 1025px) {
+    .theme-fall #index .ship-left,.theme-fall #index .ship-right {
+        display:none
+    }
+
+    .theme-fall #index .promos>.frame {
+        top: 0%;
+        left: -4%;
+        width: 104.2517%;
+        height: 106.87831%;
+        background-image: url(../static/home/promo-frame-fall.png)
+    }
+
+    .theme-fall #index .promos>.frame .icon {
+        top: 22px;
+        right: 22px
+    }
+
+    .theme-fall main {
+        background-image: url(../static/home/desktop-bg-fall.jpg);
+        background-position: center bottom
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .theme-fall main {
+        background-image:url(../static/home/desktop-bg-fall-simple.jpg)
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .theme-fall main {
+        background:#4c4c5c url(../static/home/mobile-bg-fall.jpg) center top no-repeat;
+        background-size: 100% auto
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px), only screen and (min-width: 1025px) {
+    .theme-spring #index .ship-left,.theme-spring #index .ship-right {
+        display:none
+    }
+
+    .theme-spring #index .promos>.frame {
+        top: -5.82011%;
+        left: -2.85%;
+        width: 107.48299%;
+        height: 106.08466%;
+        background-image: url(../static/home/promo-frame-spring.png)
+    }
+
+    .theme-spring #index .promos>.frame .icon {
+        top: 43px;
+        right: 48px
+    }
+
+    .theme-spring main {
+        background-image: url(../static/home/desktop-bg-spring.jpg);
+        background-position: center bottom
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .theme-spring main {
+        background-image:url(../static/home/desktop-bg-spring-simple.jpg)
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .theme-spring main {
+        background:#1a673c url(../static/home/mobile-bg-spring.jpg) center top no-repeat;
+        background-size: 100% auto
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px), only screen and (min-width: 1025px) {
+    .theme-winter #index .ship-left,.theme-winter #index .ship-right {
+        display:none
+    }
+
+    .theme-winter #index .promos>.frame {
+        top: -1.35%;
+        left: -1.75%;
+        width: 103.40136%;
+        height: 101.0582%;
+        background-image: url(promo-frame-winter.png)
+    }
+
+    .theme-winter #index .promos>.frame .icon {
+        top: 26px;
+        right: 32px
+    }
+
+    .theme-winter main {
+        background-image: url(../static/home/desktop-bg-winter.jpg);
+        background-position: center bottom
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .theme-winter main {
+        background-image:url(../static/home/desktop-bg-winter-simple.jpg)
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .theme-winter main {
+        background:#295691 url(../static/home/mobile-bg-winter.jpg) center top no-repeat;
+        background-size: 100% auto
+    }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1024px), only screen and (min-width: 1025px) {
+    .theme-anniversary #index .ship-left,.theme-anniversary #index .ship-right {
+        display:none
+    }
+
+    .theme-anniversary main {
+        background-color: #18562e;
+        background-image: url(../static/home/desktop-bg-anniversary.jpg);
+        background-position: center bottom
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .theme-anniversary main {
+        background-image:url(../static/home/desktop-bg-anniversary-simple.jpg)
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .theme-anniversary main {
+        background:#1a673c url(../static/home/mobile-bg-anniversary.jpg) center top no-repeat;
+        background-size: 100% auto
+    }
+}
+
+/*# sourceMappingURL=index.css.map */
+
